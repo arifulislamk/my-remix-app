@@ -6,7 +6,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import type { LinksFunction } from "@remix-run/node";
+import stylesheet from "./app.css";
 export default function App() {
+
   return (
     <html lang="en">
       <head>
@@ -51,3 +54,6 @@ export default function App() {
     </html>
   );
 }
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
+];
